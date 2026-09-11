@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-cormorant: var(--font-cormorant), Georgia, serif;
+
+  --color-chaay-bg: #F7F1E8;
+  --color-chaay-cream: #FFFDF8;
+  --color-chaay-dark: #191612;
+  --color-chaay-card: #241D17;
+  --color-chaay-accent: #B56A3C;
+  --color-chaay-accent-light: #C88A5A;
+  --color-chaay-secondary: #D9B892;
+  --color-chaay-muted: #6B4B38;
+  --color-chaay-text: #211B16;
+}
+
+:root {
+  --background: #F7F1E8;
+  --foreground: #211B16;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Luxury Grain & Noise Texture */
+.grain-overlay {
+  background-image: radial-gradient(rgba(33, 27, 22, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.dark-grain-overlay {
+  background-image: radial-gradient(rgba(217, 184, 146, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #191612;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B56A3C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C88A5A;
+}
+
+/* Font helpers */
+.font-playfair {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Subtle Indian Mandalas / Arch Flourishes */
+.indian-arch {
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+}
+
+/* Hide scrollbar for horizontal menu swipe on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
